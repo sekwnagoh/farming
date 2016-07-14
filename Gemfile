@@ -4,6 +4,10 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'simple_form', '3.1.0'
 gem 'font-awesome-rails'
+gem 'carrierwave'
+gem 'mini_magick'
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
