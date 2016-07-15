@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
 	
-	before_action :set_post, only: [:show, :edit, :update, :destroy]
+	before_action :set_product, only: [:show, :edit, :update, :destroy]
 
 
 	def product_params
@@ -62,6 +62,6 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.require(:product).permit(:name, :description)
+      params.require(:product).permit(:name, :description, :picture, :picture_cache)
     end
 end
