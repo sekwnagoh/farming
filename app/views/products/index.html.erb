@@ -1,3 +1,24 @@
+<br>
+<br>
+<br>
+
+<nav>
+  <div id="filters">
+    <div class="category-group">
+      <div class="button-group js-radio-button-group" >
+        <button type="button" class="btn btn-link" data-filter="">All</button>
+        <button type="button" class="btn btn-link" data-filter=".Pear">Pear</button>
+        <button type="button" class="btn btn-link" data-filter=".Rice">Rice</button>
+        <button type="button" class="btn btn-link" data-filter=".RicePear">RicePear</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+                       
+
+
 <h2>Listing posts</h2>
 
   <div class="table">
@@ -10,15 +31,14 @@
       </tr>
      </thead>
 
-  <tbody>
+  <div class='index'>
     <% @products.each do |product| %>
-      <tr>
-        <td><%= link_to image_tag(product.picture), product %></td>
-        <div class='name'><%= product.name %></div><br>
-        <div class='description'><%= product.description %></div><br>   
-      </div>
+      <div class><%= link_to image_tag(product.picture), product %></div>
+      <div class='name'><%= product.name %></div><br>
+      <div class='description'><%= product.description %></div> 
+
     <% end %>
-  </tbody>
+  </div>
 
 
 <%= link_to 'New Product', new_product_path, class: 'btn btn-default' %>
