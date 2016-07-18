@@ -9,6 +9,10 @@ class ProductsController < ApplicationController
 
 	def index 
 		@products = Product.all
+
+		if params[:category]
+			@products = eval("@products.#{params[:category]}")
+		end
 	end
 	
 	def show
@@ -62,6 +66,6 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.require(:product).permit(:name, :description, :picture, :picture_cache)
+      params.require(:product).permit(:name, :description, :picture, :picture_cache, :category)
     end
 end

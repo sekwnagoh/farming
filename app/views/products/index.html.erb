@@ -6,10 +6,10 @@
   <div id="filters">
     <div class="category-group">
       <div class="button-group js-radio-button-group" >
-        <button type="button" class="btn btn-link" data-filter="">All</button>
-        <button type="button" class="btn btn-link" data-filter=".Pear">Pear</button>
-        <button type="button" class="btn btn-link" data-filter=".Rice">Rice</button>
-        <button type="button" class="btn btn-link" data-filter=".RicePear">RicePear</button>
+        <%= link_to "All", products_path, class: "btn btn-link #{"btn-primary" if current_page?(products_path)}" %>
+        <%= link_to "Pear", products_pear_path, class: "btn btn-link #{"btn-primary" if current_page?(products_pear_path)}" %>
+        <%= link_to "Rice", products_rice_path, class: "btn btn-link #{"btn-primary" if current_page?(products_rice_path)}" %>
+        <%= link_to "P&R", products_pear_rice_path, class: "btn btn-link #{"btn-primary" if current_page?(products_pear_rice_path)}" %>
       </div>
     </div>
   </div>
