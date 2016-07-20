@@ -1,48 +1,17 @@
-<nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Farming</a>
-            </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Product</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <%= yield %>
-        <!-- /.container-fluid -->
-    </nav>
 
-   <header>
+   <header style="background-image: url(http://www.commondreams.org/sites/default/files/styles/cd_large/public/views-article/world_bank_farming.jpg?itok=jPw38H4p);">
         <div class="header-content">
             <div class="header-content-inner">
                 <h1 id="homeHeading">배ㅅ살</h1>
-                <hr>
+                <hr class="main-hr">
                 <h2>pearice</h2>
                 <class="btn btn-primary"><%= link_to 'BUY IT NOW', products_path %>
             </div>
         </div>
     </header>
 
-    <section class="bg-primary" id="about">
+    <section class="about">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3 text-center">
@@ -55,7 +24,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section class="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
