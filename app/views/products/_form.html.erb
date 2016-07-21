@@ -1,13 +1,23 @@
 <div class="container">
 <%= simple_form_for(@product) do |f| %>
-  <%= f.error_notification %>
+  <%#= f.error_notifcation %>
   <%= f.input :name %>
   <%= f.input :summary %>
-  <%= f.input :description, input_html: { rows: 10 } %>
+  <%#= f.input :description, input_html: { rows: 10 } %>
+  <%# ckeditor format %>
+  <%= f.cktext_area :description, class: "ckeditor", :ckeditor => { :toolbar => 'simple' } %>
   <%= f.input :picture, as: :file %>
-  <%= f.input :category, collection: Product.categories.keys %>
+  <%= f.input :category, colleciton: Product.categories.keys %>
   <%= f.hidden_field :picture_cache %>
-  <%=  javascript_include_tag Ckeditor.cdn_url %>
-  <%= f.button :submit %>
-<% end %>
+   <%= f.button :submit %>
+<% end %>  
+
+<%# test %>
+<%#=  javascript_include_tag Ckeditor.cdn_url %>
+  <%#= simple_form_for(@page) do |f| %>
+    <%#= form.cktext_area :notes, class: 'someclass', ckeditor: { language: 'uk'} %>
+    <%#= form.cktext_area :content, value: 'Default value', id: 'sometext' %>
+    <%#= cktext_area :page, :info, cols: 40, ckeditor: { uiColor: '#AADC6E', toolbar: 'mini' } %>
+ 
+<%# end %>
 </div>
