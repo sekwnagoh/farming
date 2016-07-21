@@ -1,20 +1,20 @@
 class ProductsController < ApplicationController
-	
-	before_action :set_product, only: [:show, :edit, :update, :destroy]
+	before_action :set_product, only: [:show, :edit, :update, :destroy, :show_pick]
 
-	def product_params
-		params.require(:product).permit(:name,:summary, :description, :picture, :picture_cache)
-	end
-
-	def index 
+	def index
 		@products = Product.all
 
 		if params[:category]
 			@products = eval("@products.#{params[:category]}")
 		end
 	end
-	
+
 	def show
+		@product_options = @product.product_options
+	end
+
+	def show_pick
+		@product_option = @product.product_option(weight: params[:weight], grade: params[:grade])
 	end
 
 	def new
@@ -37,7 +37,7 @@ class ProductsController < ApplicationController
 
 	def edit
 
-	end	
+	end
 
 	def update
 		respond_to do |format|
@@ -64,7 +64,7 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
     end
 
-    def product_params
-      params.require(:product).permit(:name, :summary, :description, :picture, :picture_cache, :category)
-    end
+  def product_params
+    params.require(:product).permit(:name, :summary, :description, :picture, :picture_cache, :category)
+  end
 end
