@@ -20,8 +20,10 @@
       <% @products.each do |product| %>
       <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
+          <div style= "min-height: 300px";>
           <%= link_to image_tag(product.picture), product %>
-          <div class="caption">
+          </div>
+          <div class="caption" style="min-height: 125px">
             <h3><%= product.name %></h3>
             <p><%= product.summary %></p>
           <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
