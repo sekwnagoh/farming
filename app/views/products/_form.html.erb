@@ -7,6 +7,7 @@
   <%= f.input :picture, as: :file %>
   <%= f.input :category, collection: Product.categories.keys %>
   <%= f.hidden_field :picture_cache %>
+  <%=  javascript_include_tag Ckeditor.cdn_url %>
   <%= f.button :submit %>
 <% end %>
 </div>
