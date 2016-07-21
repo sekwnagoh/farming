@@ -3,6 +3,6 @@ CKEDITOR.editorConfig = function (config) {
 	config.toolbar = 'simple';
 	config.toolbar_mini = [
 		["Bold",  "Italic",  "Underline",  "Strike",  "-",  "Subscript",  "Superscript"],
-	]; 
+	];
 	// ... rest of the original config.js  ...
 }

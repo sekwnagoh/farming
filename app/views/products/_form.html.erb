@@ -7,7 +7,7 @@
   <%# ckeditor format %>
   <%= f.cktext_area :description, class: "ckeditor", :ckeditor => { :toolbar => 'simple' } %>
   <%= f.input :picture, as: :file %>
-  <%= f.input :category, colleciton: Product.categories.keys %>
+  <%= f.input :category, collection: Product.categories.keys %>
   <%= f.hidden_field :picture_cache %>
    <%= f.button :submit %>
 <% end %>  
