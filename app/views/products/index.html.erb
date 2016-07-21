@@ -1,33 +1,35 @@
-
-<nav>
-  <div id="filters">
-    <div class="category-group">
-      <div class="button-group js-radio-button-group" >
-        <%= link_to "All", products_path, class: "btn btn-link #{"btn-primary" if current_page?(products_path)}" %>
-        <%= link_to "Pear", products_pear_path, class: "btn btn-link #{"btn-primary" if current_page?(products_pear_path)}" %>
-        <%= link_to "Rice", products_rice_path, class: "btn btn-link #{"btn-primary" if current_page?(products_rice_path)}" %>
-        <%= link_to "P&R", products_pear_rice_path, class: "btn btn-link #{"btn-primary" if current_page?(products_pear_rice_path)}" %>
-      </div>
-    </div>
-  </div>
-</nav>
-
+<br>
+<br>
+<br>
 <div class="container">
-<h2>Listing posts</h2>
-  <div class="row">
-    <% @products.each do |product| %>
-    <div class="col-sm-6 col-md-4">
-      <div class="thumbnail">
-        <%= link_to image_tag(product.picture), product %>
-        <div class="caption">
-          <h3><%= product.name %></h3>
-          <p><%= product.description %></p>
-          <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
+  <nav>
+    <div id="filters">
+      <div class="category-group">
+        <div class="button-group js-radio-button-group" >
+          <%= link_to "All", products_path, class: "btn btn-link #{"btn-primary" if current_page?(products_path)}" %>
+          <%= link_to "Pear", products_pear_path, class: "btn btn-link #{"btn-primary" if current_page?(products_pear_path)}" %>
+          <%= link_to "Rice", products_rice_path, class: "btn btn-link #{"btn-primary" if current_page?(products_rice_path)}" %>
+          <%= link_to "P&R", products_pear_rice_path, class: "btn btn-link #{"btn-primary" if current_page?(products_pear_rice_path)}" %>
         </div>
       </div>
     </div>
-    <% end %>
-  </div>
+  </nav>
+
+  <h2>Listing posts</h2>
+    <div class="row">
+      <% @products.each do |product| %>
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <%= link_to image_tag(product.picture), product %>
+          <div class="caption">
+            <h3><%= product.name %></h3>
+            <p><%= product.summary %></p>
+          <!-- <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p> -->
+          </div>
+        </div>
+      </div>
+      <% end %>
+</div>
 
   <%= link_to 'New Product', new_product_path, class: 'btn btn-default' %>
 </div>

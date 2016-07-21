@@ -6,7 +6,13 @@ gem 'simple_form', '3.1.0'
 gem 'font-awesome-rails'
 gem 'carrierwave'
 gem 'mini_magick'
-
+gem 'ckeditor'
+gem 'paperclip'
+gem 'refile', require: "refile/rails"
+gem 'refile-mini_magick'
+gem 'dragonfly'
+gem 'mongoid-paperclip', require: 'mongoid_paperclip'
+gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use sqlite3 as the database for Active Record
