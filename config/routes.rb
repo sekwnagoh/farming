@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get 'products/pear' => 'products#index', category: :pear
   get 'products/rice' => 'products#index', category: :rice
   get 'products/pear_rice' => 'products#index', category: :pear_rice
+  get 'products/basket_item' => 'products/basket_item'
   
   resources :products do
       member do
