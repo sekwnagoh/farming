@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+gem 'momentjs-rails', '>= 2.9.0'
+gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'simple_form', '3.1.0'
 gem 'font-awesome-rails'
@@ -32,6 +33,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

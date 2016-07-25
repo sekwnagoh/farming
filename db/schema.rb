@@ -28,10 +28,10 @@ ActiveRecord::Schema.define(version: 20160721115041) do
     t.integer  "category"
     t.string   "name"
     t.text     "description"
-    t.string   "picture"
-    t.string   "summary"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "picture"
+    t.string   "summary"
   end
 
 end

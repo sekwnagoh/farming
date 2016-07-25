@@ -1,10 +1,12 @@
 Rails.application.routes.draw do
+  get 'reserve/index'
   get 'welcome/index'
+   get 'welcome/about' => "welcome#show"
 
   get 'products/pear' => 'products#index', category: :pear
   get 'products/rice' => 'products#index', category: :rice
   get 'products/pear_rice' => 'products#index', category: :pear_rice
-  
+ 
   resources :products do
       member do
         post :show_pick
