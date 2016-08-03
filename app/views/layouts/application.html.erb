@@ -61,7 +61,11 @@
                       <%= link_to 'PRODUCT', products_path %>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                       <% if user_signed_in? %>
+                        <%=link_to "로그아웃", destroy_user_session_path, method: :delete %>
+                      <%else%>
+                        <%= link_to "로그인", new_user_session_path %>
+                      <%end%>  
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>

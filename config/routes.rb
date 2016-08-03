@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'reserve/index'
   get 'welcome/index'
    get 'welcome/about' => "welcome#show"
