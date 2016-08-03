@@ -1,9 +1,11 @@
-
- @import "font-awesome";
+@import "font-awesome";
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 @import 'bootstrap-datetimepicker';
 
+body {
+	margin-top: 50px !important;
+}
 
  #mainNav {
  	background: black;}

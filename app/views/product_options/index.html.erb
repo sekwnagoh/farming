@@ -1,0 +1,32 @@
+<table>
+	<thead>
+		<tr>
+			<th class="col-xs-4">품종</th>
+			<th class="col-xs-2">등급</th>
+			<th class="col-xs-2">무게</th>
+			<th class="col-xs-2">가격</th>
+			<th class="col-xs-2">수정 / 삭제</th>
+		</tr>
+	</thead>	
+<tbody>
+	<% @product_options.each do |product_option| %>
+			<tr>
+				<td><%= product_option.product.name %></td>
+				<td><%= product_option.grade %></td>
+				<td><%= product_option.weight %></td>
+				<td><%= product_option.price %></td>
+				<td>
+					<%= link_to "수정", edit_product_option_path(product_option) %> / 
+					<%= link_to "삭제", product_option_path(product_option), method: :delete, data: { confirm: "정말로 삭제하시겠습니까?" } %>
+				</td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= link_to "새 상품 옵션 추가하기", new_product_product_option_path(@product) %>
+<%= link_to "상품 페이지 돌아가기", product_path(@product) %>
+
+	
+
+</tbody>		

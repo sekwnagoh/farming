@@ -12,11 +12,7 @@ class ProductsController < ApplicationController
 	end
 
 	def show
-		@product_options = @product.product_options
-	end
-
-	def show_pick
-		@product_option = @product.product_option(weight: params[:weight], grade: params[:grade])
+			
 	end
 
 	def new

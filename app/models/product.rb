@@ -5,7 +5,4 @@ class Product < ActiveRecord::Base
 
 	mount_uploader :picture, PictureUploader
 
-	def product_option(options = {})
-		product_options.where(weight: options[:weight], grade: options[:grade]).first
-	end
 end

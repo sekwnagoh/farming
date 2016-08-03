@@ -14,12 +14,12 @@
 ActiveRecord::Schema.define(version: 20160802074054) do
 
   create_table "product_options", force: :cascade do |t|
-    t.string   "weight"
-    t.string   "grade"
-    t.integer  "price"
+    t.integer  "price",      null: false
+    t.integer  "grade"
+    t.integer  "weight"
     t.integer  "product_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "product_options", ["product_id"], name: "index_product_options_on_product_id"
@@ -28,10 +28,10 @@ ActiveRecord::Schema.define(version: 20160802074054) do
     t.integer  "category"
     t.string   "name"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
     t.string   "picture"
     t.string   "summary"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|

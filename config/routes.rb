@@ -11,10 +11,10 @@ Rails.application.routes.draw do
   get 'products/basket_item' => 'products/basket_item'
   
   resources :products do
-      member do
-        post :show_pick
-      end
+     resources :product_options, only: [ :index, :new]
   end
+  resources :product_options, except: [ :index, :show, :new]
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
